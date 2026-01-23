@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Signals App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Signals App Login'),
+          title: const Text('Signals App Login'),
         ),
-        body: Center(
-          child: Text('Login Screen Placeholder'),
+        body: const Center(
+          child: Text(
+            'Login Screen Placeholder',
+            style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
     );
